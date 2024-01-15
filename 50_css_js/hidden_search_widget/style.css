@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@0;1&family=Roboto:wght@400;700&display=swap');
+/* ^^ import for roboto font from google fonts */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(90deg, #336ce7, #082f91);  /* 2nd arg is start color on left side 3rd arg is color to transition to on right side */
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+    display: flex;  /*centers everything */
+    align-items: center; /*if we didn't have flex-column then itd center it in horizontally but with flex column it centers vertically */
+    justify-content: center; /*centers it in middle of browser window instead of centering at the top */
+    height: 100vh; /*100vh is view port height so it saying take up the entire of the browser/viewport */
+    overflow: hidden ; /*prevents scroll bars from being shown by default */
+}
+.search {
+    position: relative;
+    height: 50px;
+}
+.search .input {
+    background-color: white;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease ;
+}
+.btn{
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+.btn:focus, .input:focus{
+    outline: none;
+}
+.search.active .input{
+    width: 200px;
+}
+.search.active .btn{
+    transform: translateX(198px);
+}
