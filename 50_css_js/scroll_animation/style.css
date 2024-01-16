@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@0;1&family=Roboto:wght@400;700&display=swap');
+/* ^^ import for roboto font from google fonts */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto','sans-serif';
+    margin: 0;
+    display: flex;  /*centers everything */
+    flex-direction: column; /*switch's flex from row to column */
+    align-items: center; /*if we didn't have flex-column then itd center it in horizontally but with flex column it centers vertically */
+    justify-content: center; /*centers it in middle of browser window instead of centering at the top */
+    background-image: linear-gradient(to bottom right, #abdef5, #dfb9e8);
+    overflow-x: hidden; /*hides scroll bar on x axis*/
+}
+.h1{
+    margin: 10px;
+}
+.header{
+    color:#1a191994;
+}
+.box{
+    background-color: #b4edb8;
+    color: #2c2c2c94;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, .3) ;
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even){ /*selects every other box and sets them to the left for left than right transition */
+    transform: translateX(-400%);
+}
+.box.show{
+    transform: translateX(0);
+}
+.box.h2{
+    font-size: 45px;
+}
