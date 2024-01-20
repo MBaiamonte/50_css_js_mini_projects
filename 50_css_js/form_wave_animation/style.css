@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+/* ^^ import for roboto font from google fonts */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Muli','sans-serif';
+    background-color: steelblue;
+    color: white;
+    margin: 0;
+    display: flex;  /*centers everything */
+    flex-direction: column; /*switch's flex from row to column */
+    align-items: center; /*if we didn't have flex-column then itd center it in horizontally but with flex column it centers vertically */
+    justify-content: center; /*centers it in middle of browser window instead of centering at the top */
+    height:100vh; /*100vh is view port height so it saying take up the entire of the browser/viewport */
+    overflow: hidden ; /*prevents scroll bars from being shown by default */
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border: 5px;
+    border-radius: 5px;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container a{
+    text-decoration: none;
+    color: lightblue;
+}
+.form-control{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px white solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: white;
+}
+.form-control input:focus, .form-control input:valid{  /* removes input boarder */
+    outline: 0; 
+    border-bottom-color: lightblue ;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: lightblue;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+}
+.btn:focus{
+    outline: 0;
+}
+.btn:active{
+    transform: scale(.98);
+}
+.text{
+    margin-top: 30px;
+}
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.form-control label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /*defines a curve transition effect*/
+    
+}
+.form-control input:focus + label span, .form-control input:valid + label span{
+    color: lightblue;
+    transform: translateY(-30px);
+}
