@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+/* ^^ import for roboto font from google fonts */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right bottom, #76bddf, #dfb9e8);
+    font-family: 'Poppins','sans-serif';
+    margin: 0;
+    display: flex;  /*centers everything */
+    flex-wrap: column;
+    align-items: center; /*if we didn't have flex-column then itd center it in horizontally but with flex column it centers vertically */
+    text-align: center;
+    justify-content: center; /*centers it in middle of browser window instead of centering at the top */
+    height:100vh; /*100vh is view port height so it saying take up the entire of the browser/viewport */
+    overflow: hidden ; /*prevents scroll bars from being shown by default */
+}
+.btn{
+    background-color: #db8d98;
+    border: none;
+    border-radius: 5px;
+    color: #fef4bd;
+    margin: 1rem;
+    padding: 1.5rem 3rem;
+    font-size:1.2rem ;
+    font-family: inherit;
+    cursor: pointer;
+}
+.btn:focus{
+    outline: none;
+}
+.btn:hover{
+    opacity: 0.9;
+}
+.btn:active{
+    transform: scale(.98);
+}
