@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@0;1&family=Roboto:wght@400;700&display=swap');
+/* ^^ import for roboto font from google fonts */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right bottom, #60BFC1, #BADFD7);
+    font-family: 'Roboto','sans-serif';
+    margin: 0;
+    display: flex;  /*centers everything */
+    flex-direction: column; /*switch's flex from row to column */
+    align-items: center; /*if we didn't have flex-column then itd center it in horizontally but with flex column it centers vertically */
+    justify-content: center; /*centers it in middle of browser window instead of centering at the top */
+    height:100vh; /*100vh is view port height so it saying take up the entire of the browser/viewport */
+    overflow: hidden ; /*prevents scroll bars from being shown by default */
+    padding: 20px;
+}
+.container{
+    background-color: #F7E3DA;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(0, 0, 0.1), 0 6px 6px rgb(0, 0, 0.1);
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 100%;
+    width: 800px;
+}
+h3{
+    margin: 0;
+    /* opacity: 0.5; */
+    letter-spacing: 2px;
+    color: #C17779;
+}
+.joke{
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    margin: 50px auto;
+    max-width: 600px;
+    color: #C17779;
+}
+.btn{
+    /* background-color: #FDB7B9; */
+    background-image: linear-gradient(to left bottom, #60BFC1, #F7E3DA,#BADFD7 );
+    box-shadow: 0 2.5px 5px rgb(0, 0, 0.1);
+    border: 0;
+    border-radius: 10px;
+    color: #C17779;
+    /* box-shadow: 0 10px 20px rgb(0, 0, 0.1); */
+    padding: 14px 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn:focus{
+    outline: 0;
+}
+.btn:active{
+    transform: scale(.98);
+}
