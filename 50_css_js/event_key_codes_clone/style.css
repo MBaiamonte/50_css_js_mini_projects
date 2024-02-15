@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+/* ^^ import for roboto font from google fonts */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e1e1e1;
+    font-family: 'Muli','sans-serif';
+    margin: 0;
+    display: flex;  /*centers everything */
+    align-items: center; /*if we didn't have flex-column then itd center it in horizontally but with flex column it centers vertically */
+    justify-content: center; /*centers it in middle of browser window instead of centering at the top */
+    text-align: center;
+    height:100vh; /*100vh is view port height so it saying take up the entire of the browser/viewport */
+    overflow: hidden ; /*prevents scroll bars from being shown by default */
+    
+}
+.key{
+    border: 1px solid #999;
+    background-color: #eee;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0, .01);
+    display: inline-flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 20px;
+    flex-direction: column;
+    margin: 10px;
+    font-weight: bold ;
+    min-width: 150px;
+    position: relative;
+}
+.key small{
+    position: absolute;
+    top: -24px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: #555;
+    font-size: 14px;
+}
